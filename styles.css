@@ -1,0 +1,109 @@
+/* **********************GOOGLE FONT LINK**************** */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+}
+
+body {
+
+  overflow-x: hidden;
+  display: flex;
+  background-color: #f0f0f0;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.container{
+ width: 600px;
+ max-width: 100%;
+}
+h1{
+  text-align: center;
+  margin: 20px;
+}
+.faq{
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #9fa4a8;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 20px 0;
+  position: relative;
+  transition: 0.3s ease;
+  overflow: hidden;
+
+}
+.faq.active{
+  background-color: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+
+}
+.faq.active::before, .faq.active::after{
+  content: '\f075';
+  font-family: 'Font Awesome 5 Free';
+  color: #2ecc71;
+  font-size: 7rem;
+  position: absolute;
+  opacity: 0.2;
+  top: 20px;
+  left: 20px;
+  z-index: 0;
+
+}
+.faq.active::before{
+  color: #3498db;
+  top: -10px;
+  left: -30px;
+  transform: rotateY(180deg);
+
+}
+.faq-tittle{
+
+}
+.faq-text{
+  display: none;
+}
+.faq.active .faq-text{
+  display: block;
+}
+.btn{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 30px;
+  right: 30px;
+   
+}
+.faq.active .btn .fa-times{
+  display: inline-block;
+}
+
+.btn .fa-times{
+  display: none;
+  color: white;
+
+}
+
+.faq.active .btn .fa-chevron-down{
+  display: none;
+}
+
+.faq.active .btn{
+  background-color: #9fa4a8;
+}
